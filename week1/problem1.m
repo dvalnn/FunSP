@@ -10,5 +10,21 @@ xlabel('n \rightarrow');
 ylabel('Magnitude \rightarrow');
 legend("Envelope");
 title("Complex Exponential");
-pause;
 
+#sinal x[n] = u[n-20] - u[n-30] --> tamanho total do vetor = N
+x = [zeros(1, 20) ones(1, 10) zeros(1, N-30)];
+
+figure(2);
+subplot(3, 1, 1);
+stem(n, real(h));
+
+subplot(3, 1, 2);
+stem(n, x);
+
+y = conv(x, real(h));
+disp("Convolution complete.");
+
+subplot(3, 1, 3);
+stem(n, y(1:N), 'mp');
+
+disp(length(y));
