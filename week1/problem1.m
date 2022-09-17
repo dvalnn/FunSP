@@ -1,8 +1,7 @@
-
 N = input("Introduza um tamanho para o vetor de números (N > 30): ");
 #printf("O valor é: %d\n", N);
-n = [0:N-1];
-alpha = .95*exp(j*pi/3);
+n = [0:N - 1];
+alpha = .95 * exp(j * pi / 3);
 h = alpha.^n;
 
 plot(n, abs(h));
@@ -12,7 +11,7 @@ legend("Envelope");
 title("Complex Exponential");
 
 #sinal x[n] = u[n-20] - u[n-30] --> tamanho total do vetor = N
-x = [zeros(1, 20) ones(1, 10) zeros(1, N-30)];
+x = [zeros(1, 20) ones(1, 10) zeros(1, N - 30)];
 
 figure(2);
 subplot(3, 1, 1);
