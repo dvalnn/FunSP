@@ -5,8 +5,8 @@ alpha = .95 * exp(j * pi / 3);
 h = alpha.^n;
 
 plot(n, abs(h));
-xlabel('n \rightarrow');
-ylabel('Magnitude \rightarrow');
+xlabel('n \Rightarrow');
+ylabel('Magnitude \Rightarrow');
 legend("Envelope");
 title("Complex Exponential");
 
