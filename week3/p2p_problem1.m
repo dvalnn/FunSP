@@ -1,14 +1,18 @@
+pkg load control;
+pkg load signal;
+
 N = 1E5;
 maxlag = 20;
 h = [0.8 1 0.5 0.2]; % our system impulse response
 x = randn(N, 1); 
-sigma = sqrt(x.' * x); x = x / sigma;
+sigma = sqrt(x.' * x); 
+x = x / sigma;
 
 % to confirm that rx[ell]=DELTA[ell]
 [rx, lag] = xcorr(x, maxlag);
 stem(lag, rx)
-xlabel('$$\ell$$ (samples)', 'Interpreter', 'Latex');
-ylabel('$$r_{X}[\ell]$$', 'Interpreter', 'Latex'); pause
+xlabel('\iota (samples)');
+ylabel('r_{X}[\iota]');
 
 % To be completed...
 %
