@@ -1,8 +1,12 @@
-N = 20;
+N = 5;
 n = [0:N - 1];
+h = 1/5 .* ones(1,5);
 
-h = 1/5 .* [ones(1, 5), zeros(1, N - 5)];
+figure(1);
 stem(n, h);
-xlabel('n');
-ylabel('h[n]');
+axis([-1 5 0 0.3])
+xlabel("n");
 title("Resposta impulsional");
+ylabel("h[n]");
+
+% Resposta em frequencia
