@@ -15,4 +15,10 @@ figure(2);
 plot(W/pi, abs(H));
 xlabel('\omega/\pi \rightarrow');
 ylabel('H[\omega] \rightarrow');
-title("Resposta impulsional");
+title("Resposta em frequência");
+
+figure(3);
+plot(W/pi, angle(H)/pi);
+xlabel('\theta/\pi');
+ylabel('\theta(H[\omega])/\pi');
+title("Resposta de fase");
