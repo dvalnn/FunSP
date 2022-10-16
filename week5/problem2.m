@@ -11,8 +11,7 @@ x = x(FS:end); % avoid first second, may contain noise
 fprintf('Stop speaking. Now playing...\n');
 sound(x, FS);
 fprintf('Stop playing.\n');
-audiowrite('ficheiro.wav', x, FS, 'BitsPerSample', NBITS);
-[x, FS, NBITS] = wavread('soundfile.wav'); % or
+audiowrite('soundfile.wav', x, FS, 'BitsPerSample', NBITS);
 [x, FS] = audioread('soundfile.wav');
 sound(x, FS); %NOTE: x values are in the range [-1, 1]
 N = length(x);
